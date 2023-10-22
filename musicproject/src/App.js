@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Music Recommendation *we need an actual title*</h1>
+        <h1>Sound Scout</h1>
         <p>
         The purpose of *insert title* is for people like you to find new lesser known artists to listen to. 
         All you have to do is enter any artist you want in the text box on the next page, and then we will give you 5 artists 
