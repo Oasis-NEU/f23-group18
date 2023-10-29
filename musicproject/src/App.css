@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #000000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +22,38 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-style: sans-serif;
+}
+
+h1{
+  border-style: solid;
+  border-width: thick;
+  padding: 0px 40%;
+  align-items: center;
+  border-color: #029c0f;
+  background-color: #029c0f;
+  color: #000000;
+  position: absolute;
+  top: 0;
+}
+
+.textbox { 
+  position: absolute;
+  top: 20%;
+}
+
+.authors {
+  border-style: solid;
+  border-width: thin;
+  padding: 10px 64% 0px 0px;
+  text-align: left;
+  border-color: #029c0f;
+  background-color: #029c0f;
+  color: #000000;
+  font-size: medium;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .App-link {
@@ -37,6 +69,37 @@
   }
 }
 
-.get-started-button:hover {
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.get-started-button {
+  display: inline-block;
   background-color: #029c0f;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 24px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.get-started-button:hover {
+  animation: bubble 0.4s ease-out;
+}
+
+@keyframes bubble {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
