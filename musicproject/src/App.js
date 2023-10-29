@@ -16,7 +16,7 @@ function App() {
         <div className="button">
           <a href="search-prompt.js" className="get-started-button">Get Started!</a>
         </div>
-        <p className="authors">Created by: Logan Ravinuthala, Austin Hwang, Ansh Juvvadi, Waasif Mahood</p>
+        <p className="authors">Created by: Logan Ravinuthala, Austin Hwang, Ansh Juvvadi, Waasif Mahmood</p>
       </header>
     </div>
   );
