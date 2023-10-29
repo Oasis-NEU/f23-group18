@@ -19,10 +19,12 @@ def get_artist(artist_name):
     input_results = spotify.search(q='artist:' + artist_name, type='artist')
     items = input_results['artists']['items']
 
-    # if there are any artists that exist with this search term
+    # If there are any artists that exist with this search term, return the top result
     if len(items) > 0:
         artist = items[0]
         return artist
+    else:
+        print("Artist not found")
 
 # Gets the URI of the artist's JSON object
 def get_artist_uri(artist):
@@ -33,8 +35,8 @@ def get_recommended_artists(list_of_artists,max_popularity):
 
     list_of_artist_uris = []
     # gets the URI of each artist in list
-    for x in range(len(list_of_artists)):
-        artist_uri = get_artist_uri(list_of_artists[x])
+    for artist in list_of_artists:
+        artist_uri = get_artist_uri(artist)
         list_of_artist_uris.append(artist_uri)
 
     # API call
@@ -47,10 +49,9 @@ def get_recommended_artists(list_of_artists,max_popularity):
     names_of_related_artists = set()
     # for each track in the list of tracks
     for n in range(len(recs['tracks'])):
-        # get the name of the artist
+        # get the name of the artist who made the track
         names_of_related_artists.add(recs['tracks'][n]['artists'][0]['name'])
     
-
     return names_of_related_artists
 
 
@@ -66,7 +67,7 @@ def recommend(list_of_artists, maximum_popularity):
     print("Given this list of artists: " + ", ".join(list_of_artists) + "\n")
     print("Here are some recommended artists: " + ", ".join(list_of_recommended_artists)  + "\n")
 
-
+#recommend (list of artists, max popularity)
 recommend(korean_pop, 50)
 recommend(american_pop, 30)
 recommend(rap, 20)
