@@ -20,14 +20,8 @@ function Description() {
 function Button() {
   return (
     <div className="button">
-      <a href="search-prompt.js" className="get-started-button">
-        Get Started!
-      </a>
-      <div className="button">
-        <a href="/dashboard" className="get-started-button">
-          Go to Dashboard
-        </a>
-      </div>
+
+      <a href="search-prompt" className="get-started-button">Get Started!</a>
     </div>
   );
 }
@@ -39,6 +33,7 @@ function Authors() {
     </p>
   );
 }
+
 function AppHeader() {
   return (
     <header className="App-header">
