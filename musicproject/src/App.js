@@ -16,7 +16,7 @@ function Description() {
 function Button() {
   return (
     <div className="button">
-      <a href="search-prompt.js" className="get-started-button">Get Started!</a>
+      <a href="search-prompt" className="get-started-button">Get Started!</a>
     </div>
   );
 }
@@ -25,8 +25,8 @@ function Authors() {
   return (
     <p className="authors">Created by: Logan Ravinuthala, Austin Hwang, Ansh Juvvadi, Waasif Mahmood</p>
   );
-
 }
+
 function AppHeader() {
   return (
     <header className="App-header">
