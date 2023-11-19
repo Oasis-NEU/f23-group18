@@ -10,8 +10,9 @@ function Results() {
     return (
         <div className="search-prompt">
             <AppTemplate />
-            <SearchBar />
             <RerollButton />
+            <SearchBar />
+            
         </div>
     )
 }
