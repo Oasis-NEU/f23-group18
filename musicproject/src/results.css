@@ -1,0 +1,32 @@
+.reroll-button {
+    display: inline-block;
+    background-color: #029c0f;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 24px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+  }
+  
+.reroll-button:hover {
+    animation: bubble_two 0.4s ease-out;
+}
+
+@keyframes bubble_two {
+    0% {
+      transform: scale(1) translate(-50%, 200%);
+    }
+    50% {
+      transform: scale(1.2) translate(-42%, 200%);
+    }
+    100% {
+      transform: scale(1) translate(-50%, 200%);
+    }
+  }
