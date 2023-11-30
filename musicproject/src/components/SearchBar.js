@@ -39,7 +39,7 @@ function SearchBar() {
         onChange={handleInputChange}
       />
       <button onClick={handleSearch}>
-        <i className="fa-solid fa-magnifying-glass"></i>
+        <i className="fas fa-search"></i>
       </button>
     </div>
   );

@@ -8,7 +8,7 @@ load_dotenv()
 CLIENT_ID = os.getenv('CLIENT_ID')
 CLIENT_SECRET = os.getenv('CLIENT_SECRET')
 
-#client manager
+# Client manager
 client_credentials_manager = SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=CLIENT_SECRET)
 
 spotify = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
@@ -30,6 +30,11 @@ def get_artist(artist_name):
 def get_artist_uri(artist):
     return get_artist(artist)['uri']
 
+# Gets the popularity of the artist
+def get_artist_popularity(artist):
+    return get_artist(artist)['popularity']    
+
+# Gets the image url of the artist
 def get_artist_image_url(artist):
     return get_artist(artist)['images'][0]['url']
 
@@ -57,33 +62,14 @@ def get_recommended_artists(list_of_artists,max_popularity):
     
     return names_of_related_artists
 
-
-# figure out how to get the information from the front end into a list, let program work its magic
-
-
 def recommend(list_of_artists, maximum_popularity):
     list_of_recommended_artists = get_recommended_artists(list_of_artists, maximum_popularity)
     return list_of_recommended_artists
-    # print("Given this list of artists: " + ", ".join(list_of_artists) + "\n")
-    # print("Here are some recommended artists: " + ", ".join(list_of_recommended_artists)  + "\n")
-
-#recommend (list of artists, max popularity)
 
 # Recommends 5 artists that are related to the given artist
 def recommend_call(artist, maximum_popularity):
     return list(recommend([artist],maximum_popularity))[0:5]
 
-print(recommend_call("NewJeans", 80))
-
-print(get_artist_image_url("NewJeans"))
-
-# korean_pop = ["NewJeans" , "LE SSERAFIM" , "BLACKPINK"]
-# american_pop = ["Taylor Swift" , "Lady Gaga" , "Justin Bieber"]
-# rap = ["Eminem", "Drake", "50 Cent"]
-
-# recommend(korean_pop, 50)
-# recommend(american_pop, 30)
-# recommend(rap, 20)
 
 
 

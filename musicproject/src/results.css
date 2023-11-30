@@ -30,7 +30,7 @@
       transform: scale(1) translate(-50%, 200%);
     }
   }
-
+  
   .results-container {
     max-height: 80vh;
     display: flex;
