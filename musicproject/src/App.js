@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import Results from "./results";
 import SearchPrompt from "./search-prompt";
@@ -33,13 +33,18 @@ function App() {
   // );
 
 
+  function ResultsWrapper() {
+    const location = useLocation();
+    return <Results artistData={location.state?.artistData || artistData} />;
+  }
+
   return (
     <BrowserRouter>
       <div className="App">
         <Routes>
           <Route exact path="/" element={<AppHeaderHome />} />
           <Route path="/search-prompt" element={<SearchPrompt />} />
-          <Route path="/results" element={<Results />} />
+          <Route path="/results" element={<ResultsWrapper />} />
         </Routes>
 
         
