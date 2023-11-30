@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function SearchBar() {
   const [searchText, setSearchText] = useState("");
+  const navigate = useNavigate();
 
   const handleInputChange = (event) => {
     setSearchText(event.target.value);
@@ -11,6 +13,7 @@ function SearchBar() {
     // Make a POST request to your Flask backend
     fetch("http://127.0.0.1:5000/artists", {
       method: "POST",
+      mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },
@@ -19,6 +22,7 @@ function SearchBar() {
       .then((response) => response.json())
       .then((data) => {
         // Handle the response from the server
+        navigate('/results', { state: { artistData: data } });
         console.log(data);
       })
       .catch((error) => {

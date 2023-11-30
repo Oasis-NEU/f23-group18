@@ -1,5 +1,10 @@
 .App {
+  background-color: #000000;
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .App-logo {
@@ -45,8 +50,7 @@ h1{
 
 .authors {
   border-style: solid;
-  border-width: thin;
-  padding: 10px 63% 0px 0px;
+  padding: 10px 60% 0px 0px;
   text-align: left;
   border-color: #029c0f;
   background-color: #029c0f;
