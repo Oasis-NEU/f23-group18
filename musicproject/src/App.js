@@ -21,17 +21,6 @@ function App() {
   }, [])
 
 
-  // Call this using {artistsContent} 
-  // Can use this to display the artists in a vertical list fashion
-
-  // const artistsContent = (typeof artistData.artists === 'undefined') ? (
-  //   <p>Loading...</p>
-  // ) : (
-  //   artistData.artists.map((artist, i) => (
-  //     <p key={i}>{artist}</p>
-  //   ))
-  // );
-
 
   function ResultsWrapper() {
     const location = useLocation();

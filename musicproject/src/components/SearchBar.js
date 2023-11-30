@@ -13,6 +13,7 @@ function SearchBar() {
     // Make a POST request to your Flask backend
     fetch("http://127.0.0.1:5000/artists", {
       method: "POST",
+      mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },
